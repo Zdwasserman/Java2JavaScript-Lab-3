@@ -57,14 +57,34 @@ function showRemove()
   }
 };
 
-function showLookup() {
+function showLookup()
+{
   var lookup = prompt("Enter number to lookup");
-  for(var i = 0; i < phonebook.pbook.length; i++){
-    if(phonebook.pbook[i].name == lookup){
+  for(var i = 0; i < phonebook.pbook.length; i++)
+  {
+    if(phonebook.pbook[i].name == lookup)
+    {
       display.innerHTML = phonebook.pbook[i].number;
     }
-    else{
+    else
+    {
       display.innerHTML = "no match";
     }
   }
 };
+
+function reverseLookup()
+{
+  var lookup = prompt("Enter name to lookup");
+  for(var i = 0; i < phonebook.pbook.length; i++)
+  {
+    if(phonebook.pbook[i].number == lookup)
+    {
+      display.innerHTML = phonebook.pbook[i].name;
+    }
+    else
+    {
+      display.innerHTML = "no match";
+    }
+  }
+}
